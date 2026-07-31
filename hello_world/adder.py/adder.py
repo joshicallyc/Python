@@ -7,7 +7,7 @@ parser.add_argument('greeting', help = 'The greeting message displayed')
 parser.add_argument('-n', '--numbers', type = float, nargs = '*', help = 'numbers we are adding')
 parser.add_argument('-v', '--verbosity', type = int, choices = [0, 1, 2], help = 'amount of information we are giving out')
 parser.add_argument('-f', '--file', type = str)
-parser.add_argument('--time', action = 'store_true', help = 'emables timer mode')  #this is a boulean flag. No input = False; input = True
+parser.add_argument('--time', action = 'store_true', help = 'enables timer mode')  #this is a boolean flag. No input = False; input = True
 
 args = parser.parse_args()
 
