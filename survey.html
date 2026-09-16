@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Survey Form</title>
+  </head>
+
+  <body>
+    <h1 id="title">Cookycookingcook Recipe Survey Form</h1>
+    <p id="description">Thank you for visiting my cooking page! I would like to know how was your experience :)</p>
+
+    <form id="survey-form" action="">
+      <label for="name" id="name-label">Name:</label>
+      <input
+      id="name"
+      type="text"
+      name="name"
+      required
+      placeholder="First Last"
+      />
+      <label for="email" id="email-label">Email:</label>
+      <input
+      id="email"
+      type="email"
+      name="email"
+      required
+      placeholder="example@email.com"
+      />
+      <label for="number" id="number-label">How many hours do you plan to spend on baking per week?</label>
+      <input
+      id="number"
+      type="number"
+      name="time-spent"
+      min="1"
+      max="70"
+      placeholder="1"
+      />
+      <fieldset>
+        <legend>Recipes</legend>
+        <label for="dropdown">Which recipe did you like the most?</label>
+        <select id="dropdown">
+          <option value="cookies">Chocolate Chip Cookies</option>
+          <option value="smore_cookies">Smore Cookies</option>
+          <option value="pistachio_cookies">Pistachio Chocolate Cookies</option>
+          <option value="cheesecake">Basque Cheesecake</option>
+          <option value="hojicha_cheesecake">Hojicha Caramel Cheesecake</option>
+          <option value="carrotcake">Butterscotch Carrot Cake with Candied Pecans</option>
+          <option value="mochi">Butter Mochi</option>
+          <option value="puffs">Cream Puffs</option>
+          <option value="Tiramisu">Earl Grey Tiramisu</option>
+          <option value="salt_bread">Salt Bread</option>
+          <option value="cinnamon_roll">Cinnamon Rolls</option>
+          <option value="bannana_bread">Bannana Bread</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <legend>What part(s) of baking do you find the most enjoying? (choose all that apply)</legend>
+        <input
+        type="checkbox"
+        id="food"
+        value="food"
+        name="choice"
+        />
+        <label for="food">The Food</label>
+        <input
+        type="checkbox"
+        id="process"
+        value="process"
+        name="choice"
+        />
+        <label for="process">The Process</label>
+        <input
+        type="checkbox"
+        id="sharing"
+        value="sharing"
+        name="choice"
+        />
+        <label for="sharing">Sharing with family/friends</label>
+        <input
+        type="checkbox"
+        id="photo"
+        value="photo"
+        name="choice"
+        />
+        <label for="photo">Taking photos of my works!</label>
+        <input
+        type="checkbox"
+        id="media"
+        value="media"
+        name="choice"
+        />
+        <label for="media">Sharing my baking with social media</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Ratings</legend>
+        <label>Are my recipes easy to follow?
+        <input id="yes-option" type="radio" name="option" value="yes"/>
+        <label for="yes-option">Yes</label>
+        <input id="no-option" type="radio" name="option" value="yes"/>
+        <label for="no-option">No</label>
+      </fieldset>
+
+      <label for="comments">If any, what areas should I improve on?</label>
+      <textarea cols="30" rows="8" id="comments" name="comments"></textarea>
+
+      <button type="submit" id="submit">Submit Form</button>
+    </form>
+  </body>
+</html>
