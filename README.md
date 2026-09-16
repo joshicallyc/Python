@@ -1,4 +1,4 @@
-# Josh Li -- Projects
+# Josh Li - Projects
 Incoming Biophysics student at UCLA with research experience in nanomaterials and molecular biology. This repository contains coding projects developed for coursework, self-study, and skill-building.
 
 ## Projects: 
