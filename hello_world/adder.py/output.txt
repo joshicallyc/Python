@@ -1,3 +1,0 @@
-greetings
-Sum = 47.0
-Numbers Multipled = 90.0
