@@ -58,8 +58,9 @@ Python is already useful to a lab, and that's the person who gets handed the ML 
 | **4** | Summer 2027 | Intro to deep learning | A medical-image classifier |
 | **5** | 2027–28 and beyond | UCLA courses formalize the math/CS; specialize through your lab | Research-grade work in a lab |
 
-**The lab search runs alongside all of this** (see [section 10](#10-getting-into-a-lab-this-year)). Draft emails
-over winter break and send them in the first week or two of winter quarter. **Don't wait until you feel "ready."**
+**The lab search runs alongside all of this** (see [section 10](#10-getting-into-a-lab-this-year)). Send a first
+small batch of emails in a quiet week of late fall, and a second batch in the first week of winter if needed.
+**Don't wait until you feel "ready."**
 
 ---
 
@@ -305,8 +306,10 @@ Many people move into the computational side this way.
 ### Timeline
 - [ ] `L-01` **Fall quarter:** finish Phase 0 and start Phase 1. List **10–15 labs**. For each, read 1–2 recent paper
       abstracts and write one sentence in your own words about what they do.
-- [ ] `L-02` **Winter break → first two weeks of winter:** draft emails over break, then send them in batches of
-      about 5 once the quarter starts (early January). Follow up once after about 7–10 days. Also try emailing a grad
+- [ ] `L-02` **Late fall, then early winter:** send a first batch of 3–5 emails in a fall week without exams.
+      Labs often decide on next quarter's undergrads during the current quarter, so a yes in November lets you
+      start in week 1 of winter. Follow up once after about 7–10 days. Send a second batch in the first week of
+      winter if needed. Also try emailing a grad
       student or postdoc in the lab; they often manage undergrads and reply faster.
 - [ ] `L-03` **Once someone says yes:** set up **SRP 99** credit through the
       [Undergraduate Research Center–Sciences](https://sciences.ugresearch.ucla.edu). It's for lower-division

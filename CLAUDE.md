@@ -31,7 +31,8 @@ Each kind of information has exactly **one** home. Don't create other trackers o
 | This week's tasks, week mode, Sunday check-in, questions for Claude | Josh's private Notion page **"Coding Now"** |
 | Saved explanations ("save this") | Notion subpages under Josh's **Coding** page |
 | Daily habits, classes, assignments, reflections | Josh's existing Notion pages (**read-only** for Claude) |
-| Lab outreach and hard deadlines | Private (Notion / Google Calendar). **Never in this repo.** |
+| Lab outreach (labs, notes, emails, status) | Josh's Research Compass site. Claude can't open it, so ask Josh. **Never in this repo.** |
+| Hard deadlines | Josh's Google Calendar. **Never in this repo.** |
 
 ### Commands Josh may use
 - **"start"**: pull the latest `main`. Read ROADMAP.md (the current phase is the first one with unchecked items
