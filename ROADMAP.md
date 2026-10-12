@@ -107,6 +107,9 @@ Rules that make this stick:
 
 ## 5. Phase 0: Set up your workbench and fix the translator (fall quarter, now)
 
+**Rusty after a break?** Start with the [Python refresher](00_refresher/) (one evening in Colab, with DNA
+examples and self-checking exercises). Its last part covers `P0-01`.
+
 ### Setup
 - [ ] `P0-01` **Get Python running.** [Google Colab](https://colab.research.google.com) counts: it runs notebooks in the
       browser with nothing to install and is enough for Phases 1–4. Install **Miniconda** on your laptop when you first
@@ -120,6 +123,7 @@ Rules that make this stick:
       Python/
         README.md            ← portfolio front page: link each project + one figure
         ROADMAP.md           ← this file
+        00_refresher/        ← Python refresher notebook
         CLI_project/         ← Phase 0
         web/                 ← move the HTML/CSS projects here
         01_python_bio/       ← Phase 1
