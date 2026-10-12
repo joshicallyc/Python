@@ -51,8 +51,8 @@ Python is already useful to a lab, and that's the person who gets handed the ML 
 
 | Phase | When | Focus | What you'll have built |
 |---|---|---|---|
-| **0** | Oct 2026 (≈2 weeks) | Set up tools; fix the DNA translator | A working translator, checked against Biopython |
-| **1** | Oct–Dec 2026 (fall) | Python for biology | Rosalind solutions, a sequence toolkit, your first plots |
+| **0** | Oct–Nov 2026 (about 5 big nights) | Set up tools; fix the DNA translator | A working translator, checked against Biopython |
+| **1** | Nov 2026 – winter break | Python for biology | Rosalind solutions, a sequence toolkit, your first plots |
 | **2** | Jan–Mar 2027 (winter) | Data analysis, statistics, command line | 2 notebooks on real data (one of them imaging) |
 | **3** | Apr–Jun 2027 (spring) | Classical ML (scikit-learn) | A diagnostic classifier and a drug-property predictor |
 | **4** | Summer 2027 | Intro to deep learning | A medical-image classifier |
@@ -97,23 +97,24 @@ Rules that make this stick:
 - **This week's to-dos live on a private planning page** that points back here by ID. It also holds the Sunday
   check-in (3 lines: what I did / where I got stuck / next week's mode).
 - **Coding sessions with Claude** start with "start" and end with "wrap up". At wrap-up, Claude proposes which
-  items to check off and a one-line log entry, then commits them with that session's work, but only after you
-  confirm.
+  items to check off and an update to this week's progress-log row, then commits them with that session's work,
+  but only after you confirm.
+- Items marked *(optional)* and the third Phase 2 project don't block moving on to the next phase.
 - **The [progress log](#progress-log)** at the bottom covers coding and learning only.
 
 ---
 
-## 5. Phase 0: Set up your workbench and fix the translator (≈2 weeks, now)
+## 5. Phase 0: Set up your workbench and fix the translator (fall quarter, now)
 
 ### Setup
-- [ ] `P0-01` Install **Python with Miniconda** (or Anaconda) so you can create environments and install packages.
-      For zero setup, **[Google Colab](https://colab.research.google.com)** runs notebooks in the browser and is
-      enough for Phases 1–4.
+- [ ] `P0-01` **Get Python running.** [Google Colab](https://colab.research.google.com) counts: it runs notebooks in the
+      browser with nothing to install and is enough for Phases 1–4. Install **Miniconda** on your laptop when you first
+      need local packages or want to run scripts outside the browser.
 - [ ] `P0-02` Install **VS Code** with the Python and Jupyter extensions.
 - [ ] `P0-03` Learn the **basic git loop** from your own computer: `git add` → `git commit -m "..."` → `git push`, instead of
       uploading files on the GitHub website.
       ([Software Carpentry: Git](https://swcarpentry.github.io/git-novice/), episodes 1–7)
-- [ ] `P0-04` Organize the repo so it reads well to a professor (suggested):
+- [ ] `P0-04` *(optional)* Organize the repo so it reads well to a professor (suggested):
       ```
       Python/
         README.md            ← portfolio front page: link each project + one figure
@@ -152,7 +153,7 @@ good first debugging exercise. Work through these hints in order, and try each o
 
 ---
 
-## 6. Phase 1: Python for biology (Oct–Dec 2026)
+## 6. Phase 1: Python for biology (Nov 2026 – winter break)
 
 **Skills:** functions, lists and dictionaries, loops over files, string methods, list comprehensions, importing
 modules, reading documentation, writing a small module that other scripts import.
@@ -184,7 +185,7 @@ auto-grading. It feels like puzzles instead of lectures, and each problem is rea
       `translate`, `find_orfs`
 - [ ] `P1-18` Write a script that imports it, reads a multi-gene FASTA, and **plots GC content per gene** with
       matplotlib. This is your first figure.
-- [ ] `P1-19` Stretch: a **sliding-window GC plot** along a whole small genome (e.g., a bacteriophage or SARS-CoV-2,
+- [ ] `P1-19` *(optional stretch)* A **sliding-window GC plot** along a whole small genome (e.g., a bacteriophage or SARS-CoV-2,
       downloaded from NCBI). This is a real bioinformatics figure.
 - [ ] `P1-20` Write a README with what it does, how to run it, and the figure
 
@@ -302,15 +303,14 @@ direction is downhill." That idea, **gradient descent**, is how models learn.
 Many people move into the computational side this way.
 
 ### Timeline
-- [ ] `L-01` **Now–November:** finish Phase 0 and start Phase 1. List **10–15 labs**. For each, read 1–2 recent paper
+- [ ] `L-01` **Fall quarter:** finish Phase 0 and start Phase 1. List **10–15 labs**. For each, read 1–2 recent paper
       abstracts and write one sentence in your own words about what they do.
 - [ ] `L-02` **Winter break → first two weeks of winter:** draft emails over break, then send them in batches of
       about 5 once the quarter starts (early January). Follow up once after about 7–10 days. Also try emailing a grad
       student or postdoc in the lab; they often manage undergrads and reply faster.
 - [ ] `L-03` **Once someone says yes:** set up **SRP 99** credit through the
       [Undergraduate Research Center–Sciences](https://sciences.ugresearch.ucla.edu). It's for lower-division
-      students. You need a faculty mentor first, and the contract is due **Friday of week 2** of the quarter
-      (for winter 2027 that's likely Friday, January 15; confirm on the URC site).
+      students. You need a faculty mentor first, and the contract is due **Friday of week 2** of the quarter.
 - [ ] `L-04` **Later:** the bioinformatics minor lets research units (CS/Bioinformatics 194/199) count as electives
 
 ### Where to look (diagnostics / drug development / computational)
@@ -371,8 +371,7 @@ requirements change.*
 > **Heads-up about your major:** in April 2026, UCLA Physics & Astronomy announced it will **suspend admission to the
 > Biophysics BS** (Fall 2026 for continuing students, Fall 2027 for new admits). It also plans to propose
 > discontinuing the major. Students who entered as new Biophysics majors in Fall 2026 **can continue in the
-> major**. Since you're also aiming at bioengineering, it's worth one meeting with a Physics & Astronomy advisor
-> this year to confirm your path. ([department page](https://www.pa.ucla.edu/majors-and-requirements.html),
+> major**. ([department page](https://www.pa.ucla.edu/majors-and-requirements.html),
 > [Daily Bruin](https://dailybruin.com/2026/04/13/ucla-physics-and-astronomy-department-to-suspend-admission-to-biophysics-major/))
 
 **Self-study that pairs with those courses**
