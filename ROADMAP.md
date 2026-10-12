@@ -1,7 +1,7 @@
 # Learning Roadmap: Computing & Machine Learning for Bioengineering
 
-*Started October 2026. This is a living document: check boxes off, cross things out, and add a line to the
-[progress log](#progress-log) at the bottom every week.*
+*Started October 2026. This is a living document. Each checkbox has a permanent ID (like `P0-05`) so weekly
+plans can point to it. See [how progress is tracked](#how-progress-is-tracked).*
 
 **Goal:** build real computing/ML skills for disease diagnostics and drug development. Join a UCLA lab during
 the 2026–27 school year, then take linear algebra, statistics, and programming courses in year 2.
@@ -58,41 +58,62 @@ Python is already useful to a lab, and that's the person who gets handed the ML 
 | **4** | Summer 2027 | Intro to deep learning | A medical-image classifier |
 | **5** | 2027–28 and beyond | UCLA courses formalize the math/CS; specialize through your lab | Research-grade work in a lab |
 
-**The lab search runs alongside all of this** (see [section 10](#10-getting-into-a-lab-this-year)). Start emailing
-in late fall or the first week or two of winter. **Don't wait until you feel "ready."**
+**The lab search runs alongside all of this** (see [section 10](#10-getting-into-a-lab-this-year)). Draft emails
+over winter break and send them in the first week or two of winter quarter. **Don't wait until you feel "ready."**
 
 ---
 
-## 4. Weekly rhythm (about 5–6 hours/week during the quarter)
+## 4. Weekly rhythm: built around school, not the other way around
 
-| Session | Length | What |
+School comes first. Coding fits into two kinds of time:
+
+| Kind | Length | When | Examples |
+|---|---|---|---|
+| **Small tasks** | 15–30 min | Scattered time: between classes, on the bus, before bed | One Rosalind problem, one StatQuest video, a tutorial section, a lab's paper abstract |
+| **Big night** | ~2 hr | 1–2 evenings a week, **after** school work is done | Writing or fixing a project's code (often with Claude) |
+
+Each Sunday, pick next week's **mode**:
+
+| Mode | Load | Use it for |
 |---|---|---|
-| **Learn** | ~1 hr | One video or reading (StatQuest, a tutorial chapter, etc.) |
-| **Build ×2** | ~2 hr each | Write code: an exercise or a piece of the current project |
-| **Log** | 10 min | Add one line to the progress log: what you did and what confused you |
+| **Normal** | 3 small tasks + 1 big night | Regular weeks |
+| **Light** | 2 small tasks; big night optional | The week after exams, or a week with one exam or paper |
+| **Exam** | 2 small tasks of 15 min; no big night | Midterm and finals weeks. **Never zero.** |
+| **Break** | 2+ big nights + small tasks | Winter and spring break |
 
 Rules that make this stick:
 
-1. **Consistency beats intensity.** 30 minutes during finals week is better than zero. Breaking the streak is how
-   the last two attempts ended.
-2. **Results first.** If you've gone a week without producing a plot, table, or number, change what you're doing.
-3. **Type the code yourself**, even when copying from a tutorial. Your fingers learn the syntax.
-4. **Got stuck? Use the 20-minute rule:** try for 20 minutes, then ask (Claude, Stack Overflow, a classmate, a TA).
-5. **Commit to GitHub every build session.** Your GitHub is your lab résumé (see section 10).
+1. **Consistency beats intensity.** Two 15-minute tasks in finals week keep the habit alive. Zero breaks it.
+2. **No debt.** Unfinished tasks are dropped, not carried into next week. If less than half the plan gets done two
+   weeks in a row, shrink the load by about a third.
+3. **Results first.** If you've gone a week without producing a plot, table, or number, change what you're doing.
+4. **Type the code yourself**, even when copying from a tutorial. Your fingers learn the syntax.
+5. **Got stuck? Use the 20-minute rule:** try for 20 minutes, then ask (Claude, Stack Overflow, a classmate, a TA).
+6. **Commit to GitHub every big night.** Your GitHub is your lab résumé (see section 10).
+
+### How progress is tracked
+- **This file is the plan and the record.** Each item has a permanent ID like `P0-05`. IDs are never renumbered or
+  reused; an item that gets dropped is ~~struck through~~ instead of deleted.
+- **This week's to-dos live on a private planning page** that points back here by ID. It also holds the Sunday
+  check-in (3 lines: what I did / where I got stuck / next week's mode).
+- **Coding sessions with Claude** start with "start" and end with "wrap up". At wrap-up, Claude proposes which
+  items to check off and a one-line log entry, then commits them with that session's work, but only after you
+  confirm.
+- **The [progress log](#progress-log)** at the bottom covers coding and learning only.
 
 ---
 
 ## 5. Phase 0: Set up your workbench and fix the translator (≈2 weeks, now)
 
 ### Setup
-- [ ] Install **Python with Miniconda** (or Anaconda) so you can create environments and install packages.
+- [ ] `P0-01` Install **Python with Miniconda** (or Anaconda) so you can create environments and install packages.
       For zero setup, **[Google Colab](https://colab.research.google.com)** runs notebooks in the browser and is
       enough for Phases 1–4.
-- [ ] Install **VS Code** with the Python and Jupyter extensions.
-- [ ] Learn the **basic git loop** from your own computer: `git add` → `git commit -m "..."` → `git push`, instead of
+- [ ] `P0-02` Install **VS Code** with the Python and Jupyter extensions.
+- [ ] `P0-03` Learn the **basic git loop** from your own computer: `git add` → `git commit -m "..."` → `git push`, instead of
       uploading files on the GitHub website.
       ([Software Carpentry: Git](https://swcarpentry.github.io/git-novice/), episodes 1–7)
-- [ ] Organize the repo so it reads well to a professor (suggested):
+- [ ] `P0-04` Organize the repo so it reads well to a professor (suggested):
       ```
       Python/
         README.md            ← portfolio front page: link each project + one figure
@@ -109,24 +130,24 @@ Rules that make this stick:
 Right now the script only writes the FASTA header to `codon.txt`; **no amino acids come out.** That makes it a
 good first debugging exercise. Work through these hints in order, and try each one before asking for the answer:
 
-- [ ] **The real bug:** `for codon in output:` loops over the string **one letter at a time**, so a single letter
+- [ ] `P0-05` **The real bug:** `for codon in output:` loops over the string **one letter at a time**, so a single letter
       can never equal `'AUG'`. How do you loop over 3-letter chunks? (Hint: you already wrote the
       `range(0, len(output), 3)` loop. It just throws away each codon it makes.)
-- [ ] `elif codon == ('GUU', 'GUC', ...)` compares a string to a tuple, so it's always `False`. What operator did
+- [ ] `P0-06` `elif codon == ('GUU', 'GUC', ...)` compares a string to a tuple, so it's always `False`. What operator did
       you use correctly on the lines above it?
-- [ ] **FASTA sequences span several lines.** Translating line by line splits codons across line breaks. Collect all
+- [ ] `P0-07` **FASTA sequences span several lines.** Translating line by line splits codons across line breaks. Collect all
       sequence lines into one string first, then translate.
-- [ ] **A biology question to settle and document:** your code builds the *complement* (A→U, T→A, C→G, G→C).
+- [ ] `P0-08` **A biology question to settle and document:** your code builds the *complement* (A→U, T→A, C→G, G→C).
       GenBank FASTA records are usually the *coding (sense) strand*, and its mRNA is the same sequence with T→U.
       Which strand is in your file, and which conversion is correct?
-- [ ] Replace the `elif` chain with a **dictionary** holding all 64 codons (your README already says the program uses
+- [ ] `P0-09` Replace the `elif` chain with a **dictionary** holding all 64 codons (your README already says the program uses
       dictionaries), and stop at stop codons.
-- [ ] Use `with open(...) as f:` so files close properly, and add an `--output` argument instead of hard-coding
+- [ ] `P0-10` Use `with open(...) as f:` so files close properly, and add an `--output` argument instead of hard-coding
       `codon.txt`.
-- [ ] Split the code into **functions**: `read_fasta()`, `transcribe()`, `translate()`.
-- [ ] **Check your answer** against Biopython: `from Bio.Seq import Seq; Seq(dna).translate()`.
+- [ ] `P0-11` Split the code into **functions**: `read_fasta()`, `transcribe()`, `translate()`.
+- [ ] `P0-12` **Check your answer** against Biopython: `from Bio.Seq import Seq; Seq(dna).translate()`.
       Professionals test their code against a trusted reference like this all the time.
-- [ ] Rename `humandna.fasta.html` to `humandna.fasta` (it's a FASTA file, not a web page) and run the translator on
+- [ ] `P0-13` Rename `humandna.fasta.html` to `humandna.fasta` (it's a FASTA file, not a web page) and run the translator on
       it too.
 
 ---
@@ -139,33 +160,33 @@ modules, reading documentation, writing a small module that other scripts import
 **Main resource: [Rosalind](https://rosalind.info).** It's a set of bioinformatics problems with instant
 auto-grading. It feels like puzzles instead of lectures, and each problem is real biology.
 
-- [ ] **Python Village** (INI1–INI6): fast review of what you know, plus files and dictionaries
-- [ ] **Bioinformatics Stronghold**, roughly in this order:
-  - [ ] DNA (counting nucleotides)
-  - [ ] RNA (transcription)
-  - [ ] REVC (reverse complement)
-  - [ ] FIB (recurrence relations)
-  - [ ] GC (GC content)
-  - [ ] HAMM (point mutations)
-  - [ ] PROT (translation, which redoes your translator properly)
-  - [ ] SUBS (finding a motif)
-  - [ ] IPRB (Mendel's first law)
-  - [ ] CONS (consensus and profile)
-  - [ ] PRTM (protein mass)
-  - [ ] REVP (restriction sites)
-  - [ ] SPLC (RNA splicing)
-  - [ ] ORF (open reading frames)
-- [ ] **[Biopython](https://biopython.org)** tutorial: `SeqIO` for reading FASTA/GenBank, `Seq` objects, and
+- [ ] `P1-01` **Python Village** (INI1–INI6): fast review of what you know, plus files and dictionaries
+- **Bioinformatics Stronghold**, roughly in this order:
+  - [ ] `P1-02` DNA (counting nucleotides)
+  - [ ] `P1-03` RNA (transcription)
+  - [ ] `P1-04` REVC (reverse complement)
+  - [ ] `P1-05` FIB (recurrence relations)
+  - [ ] `P1-06` GC (GC content)
+  - [ ] `P1-07` HAMM (point mutations)
+  - [ ] `P1-08` PROT (translation, which redoes your translator properly)
+  - [ ] `P1-09` SUBS (finding a motif)
+  - [ ] `P1-10` IPRB (Mendel's first law)
+  - [ ] `P1-11` CONS (consensus and profile)
+  - [ ] `P1-12` PRTM (protein mass)
+  - [ ] `P1-13` REVP (restriction sites)
+  - [ ] `P1-14` SPLC (RNA splicing)
+  - [ ] `P1-15` ORF (open reading frames)
+- [ ] `P1-16` **[Biopython](https://biopython.org)** tutorial: `SeqIO` for reading FASTA/GenBank, `Seq` objects, and
       `Entrez` for downloading a sequence from NCBI by accession number
 
 **Project: sequence toolkit** (`01_python_bio/`)
-- [ ] Write `seqtools.py` with functions you wrote for Rosalind: `gc_content`, `reverse_complement`, `transcribe`,
+- [ ] `P1-17` Write `seqtools.py` with functions you wrote for Rosalind: `gc_content`, `reverse_complement`, `transcribe`,
       `translate`, `find_orfs`
-- [ ] Write a script that imports it, reads a multi-gene FASTA, and **plots GC content per gene** with
+- [ ] `P1-18` Write a script that imports it, reads a multi-gene FASTA, and **plots GC content per gene** with
       matplotlib. This is your first figure.
-- [ ] Stretch: a **sliding-window GC plot** along a whole small genome (e.g., a bacteriophage or SARS-CoV-2,
+- [ ] `P1-19` Stretch: a **sliding-window GC plot** along a whole small genome (e.g., a bacteriophage or SARS-CoV-2,
       downloaded from NCBI). This is a real bioinformatics figure.
-- [ ] Write a README with what it does, how to run it, and the figure
+- [ ] `P1-20` Write a README with what it does, how to run it, and the figure
 
 **Math alongside:** none required yet. If you're curious, start
 [3Blue1Brown's *Essence of Linear Algebra*](https://www.3blue1brown.com/topics/linear-algebra) (short videos with
@@ -194,15 +215,15 @@ multiple-testing correction; basic Unix shell.
   committing to every session.
 
 **Projects** (do at least two, in `02_data_analysis/`)
-- [ ] **A. Diagnostic data exploration:** load scikit-learn's built-in **Breast Cancer Wisconsin (Diagnostic)**
+- [ ] `P2-01` **A. Diagnostic data exploration:** load scikit-learn's built-in **Breast Cancer Wisconsin (Diagnostic)**
       dataset (`sklearn.datasets.load_breast_cancer`). Its features were measured from microscope images of
       biopsies. Plot how each feature differs between benign and malignant samples, and find which features
       separate them best. *This sets up Phase 3.*
-- [ ] **B. Microscopy image analysis:** count and measure nuclei with scikit-image (threshold → segment → label →
+- [ ] `P2-02` **B. Microscopy image analysis:** count and measure nuclei with scikit-image (threshold → segment → label →
       measure). Start with the built-in `skimage.data.human_mitosis()` image, then try a real set from the
       [Broad Bioimage Benchmark Collection](https://bbbc.broadinstitute.org). *This is exactly how many diagnostics
       labs use code.*
-- [ ] **C. Gene expression:** download a disease-vs-control dataset from [NCBI GEO](https://www.ncbi.nlm.nih.gov/geo/),
+- [ ] `P2-03` **C. Gene expression:** download a disease-vs-control dataset from [NCBI GEO](https://www.ncbi.nlm.nih.gov/geo/),
       test each gene for differences, correct for multiple testing, and make a **volcano plot**.
 
 **Math alongside:** finish *Essence of Linear Algebra*. Watch for this idea: a dataset with 500 samples and 30
@@ -231,15 +252,15 @@ features is a 500×30 matrix, and much of ML is matrix operations.
 - [scikit-learn user guide](https://scikit-learn.org/stable/user_guide.html)
 
 **Projects** (`03_ml/`)
-- [ ] **Diagnostic classifier (diagnostics track):** on the Breast Cancer Wisconsin data, train logistic regression and
+- [ ] `P3-01` **Diagnostic classifier (diagnostics track):** on the Breast Cancer Wisconsin data, train logistic regression and
       a random forest, then report sensitivity, specificity, and ROC-AUC with cross-validation. Then answer: *in
       cancer screening, is a false negative or a false positive worse? How would you move the decision threshold?*
       Write the README like a mini paper: question, data, methods, results figure, limitations.
-- [ ] **Molecular property predictor (drug-development track):** predict a drug-relevant property such as aqueous
+- [ ] `P3-02` **Molecular property predictor (drug-development track):** predict a drug-relevant property such as aqueous
       solubility from molecular structure. Get the data from [Therapeutics Data Commons](https://tdcommons.ai)
       (ADME datasets; `pip install PyTDC`), turn SMILES strings into fingerprints with [RDKit](https://www.rdkit.org),
       and train a random forest.
-- [ ] **Unsupervised:** PCA + clustering on a gene expression dataset (e.g., cancer subtypes). Do the clusters match
+- [ ] `P3-03` **Unsupervised:** PCA + clustering on a gene expression dataset (e.g., cancer subtypes). Do the clusters match
       the known labels?
 
 **Math alongside:** probability basics (Khan Academy or StatQuest). Also the idea of a derivative as "which
@@ -258,12 +279,12 @@ direction is downhill." That idea, **gradient descent**, is how models learn.
 - Use **Google Colab's free GPU**; no special hardware needed
 
 **Projects** (`04_deep_learning/`)
-- [ ] **Medical image classifier:** use [MedMNIST](https://medmnist.com) (small, standardized medical image datasets
+- [ ] `P4-01` **Medical image classifier:** use [MedMNIST](https://medmnist.com) (small, standardized medical image datasets
       such as blood cells, pathology, and skin lesions). Train a small CNN, then a pretrained model (transfer
       learning), and compare both against a simple baseline. Report sensitivity and specificity per class.
-- [ ] *(Drug track)* A neural network on molecules with [DeepChem](https://deepchem.io) tutorials, compared with
+- [ ] `P4-02` *(Drug track)* A neural network on molecules with [DeepChem](https://deepchem.io) tutorials, compared with
       your Phase 3 random forest
-- [ ] *(Biophysics tie-in)* Pick a disease-relevant protein, get its predicted structure from the
+- [ ] `P4-03` *(Biophysics tie-in)* Pick a disease-relevant protein, get its predicted structure from the
       [AlphaFold Database](https://alphafold.ebi.ac.uk), and view it in ChimeraX or PyMOL. Learn what the
       confidence score (pLDDT) means.
 
@@ -281,14 +302,16 @@ direction is downhill." That idea, **gradient descent**, is how models learn.
 Many people move into the computational side this way.
 
 ### Timeline
-- [ ] **Now–November:** finish Phase 0 and start Phase 1. List **10–15 labs**. For each, read 1–2 recent paper
+- [ ] `L-01` **Now–November:** finish Phase 0 and start Phase 1. List **10–15 labs**. For each, read 1–2 recent paper
       abstracts and write one sentence in your own words about what they do.
-- [ ] **Late Nov / weeks 0–2 of winter:** email PIs in batches of about 5. Follow up once after about 7–10 days.
-      Also try emailing a grad student or postdoc in the lab; they often manage undergrads and reply faster.
-- [ ] **Once someone says yes:** set up **SRP 99** credit through the
+- [ ] `L-02` **Winter break → first two weeks of winter:** draft emails over break, then send them in batches of
+      about 5 once the quarter starts (early January). Follow up once after about 7–10 days. Also try emailing a grad
+      student or postdoc in the lab; they often manage undergrads and reply faster.
+- [ ] `L-03` **Once someone says yes:** set up **SRP 99** credit through the
       [Undergraduate Research Center–Sciences](https://sciences.ugresearch.ucla.edu). It's for lower-division
-      students. You need a faculty mentor first, and the contract is due **Friday of week 2** of the quarter.
-- [ ] **Later:** the bioinformatics minor lets research units (CS/Bioinformatics 194/199) count as electives
+      students. You need a faculty mentor first, and the contract is due **Friday of week 2** of the quarter
+      (for winter 2027 that's likely Friday, January 15; confirm on the URC site).
+- [ ] `L-04` **Later:** the bioinformatics minor lets research units (CS/Bioinformatics 194/199) count as electives
 
 ### Where to look (diagnostics / drug development / computational)
 - **[Ozcan lab](https://innovate.ee.ucla.edu)** (ECE + Bioengineering): computational imaging and deep learning for
@@ -401,7 +424,7 @@ requirements change.*
 
 ## Progress log
 
-*One line per week. Patterns in the "stuck on" column show what to review.*
+*One line per week, about coding and learning only. Patterns in the "stuck on" column show what to review.*
 
 | Week of | What I did | What I learned / got stuck on |
 |---|---|---|
