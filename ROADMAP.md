@@ -51,7 +51,7 @@ Python is already useful to a lab, and that's the person who gets handed the ML 
 
 | Phase | When | Focus | What you'll have built |
 |---|---|---|---|
-| **0** | Oct–Nov 2026 (about 5 big nights) | Set up tools; fix the DNA translator | A working translator, checked against Biopython |
+| **0** | Oct–Nov 2026 (about 5 big nights) | Set up tools; fix the DNA translator; fill in Python basics | A working translator, checked against Biopython |
 | **1** | Nov 2026 – winter break | Python for biology | Rosalind solutions, a sequence toolkit, your first plots |
 | **2** | Jan–Mar 2027 (winter) | Data analysis, statistics, command line | 2 notebooks on real data (one of them imaging) |
 | **3** | Apr–Jun 2027 (spring) | Classical ML (scikit-learn) | A diagnostic classifier and a drug-property predictor |
@@ -155,6 +155,17 @@ good first debugging exercise. Work through these hints in order, and try each o
       Professionals test their code against a trusted reference like this all the time.
 - [ ] `P0-13` Rename `humandna.fasta.html` to `humandna.fasta` (it's a FASTA file, not a web page) and run the translator on
       it too.
+
+### Fill in the gaps: general Python
+The refresher and translator focus on what this project needs. This course covers general Python basics more
+broadly, in the same try-it-yourself format.
+- [ ] `P0-14` **Kaggle Learn's free [Python course](https://www.kaggle.com/learn/python)**: 7 short lessons (numbers,
+      functions, booleans and conditionals, lists, loops and list comprehensions, strings and dictionaries, imports),
+      each a tutorial plus an auto-checked exercise in the browser (free Kaggle account). About 4–5 hours in total;
+      skim the parts the refresher already covered. Do roughly one lesson per sitting during light weeks.
+      - **Also learn f-strings.** The course (last updated in 2022) builds strings with the older `.format()`. Modern
+        Python mostly uses f-strings instead, e.g. `f"GC content: {gc:.2f}"`
+        ([Python tutorial: formatted string literals](https://docs.python.org/3/tutorial/inputoutput.html#formatted-string-literals)).
 
 ---
 
