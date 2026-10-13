@@ -5,8 +5,8 @@ parser.add_argument('-f', '--file', type=str, required=True, help='input FASTA f
 
 args = parser.parse_args()
 
-input_file = open(args.file, 'r')
-output_file = open('codon.txt', 'w')
+input_file = open(args.file, 'r', encoding='utf-8')
+output_file = open('amino_acid_sequence.txt', 'w', encoding='utf-8')
 
 for line in input_file:
     line = line.upper()
@@ -24,47 +24,37 @@ for line in input_file:
                 output += 'G'
             elif letter == 'G':
                 output += 'C'
+
+        amino_acid_line = ''
         for n in range(0, len(output), 3):
             codon = output[n:n + 3]
-        #     output_file.write('(' + codon + ')') 
-        # output_file.write('\n')
-        
-
-        for codon in output:
-            amino_acid = ''
-            if codon == 'AUG':
-                amino_acid += 'START'
-            elif codon in ('UUU', 'UUC'):   #this means if codon=='UUU' or codon=='UUC'
-                amino_acid += 'Phe'
-            elif codon in ('UUA', 'UUG', 'CUU', 'CUC', 'CUA', 'CUG'):
-                amino_acid  += 'Leu'
-            elif codon in ('AUU', 'AUC', 'AUA'):
-                amino_acid  += 'Ile'
-            elif codon == ('GUU', 'GUC', 'GUA', 'GUG'):
-                amino_acid  += 'Val'
-            elif codon == ('UCU', 'UCC', 'UCA', 'UCG', 'AGU', 'AGC'):
-                amino_acid  += 'Ser'
-        output_file.write(amino_acid)
-
-
-
-
-
-            
-
-
-        #     if codon == 'AUG':
-        #         output += 'START'
-        #     elif codon == 'UUU' or 'UUC':
-        #         output += 'Phe'
-        #     elif codon == 'UUA' or 'UUG' or 'CUU' or 'CUC' or 'CUA' or 'CUG':
-        #         output += 'Leu'
-        #     elif codon == 'AUU' or 'AUC' or 'AUA':
-        #         output += 'Ile'
-        #     elif codon == 'GUU' or 'GUC' or 'GUA' or 'GUG':
-        #         output += 'Val'
-        #     elif codon == 'UCU' or 'UCC' or 'UCA' or 'UCG' or 'AGU' or 'AGC':
-        #         output += 'Ser'
-        # output_file.write(output)
-
-    
+            amino_acid_groups = {
+                'Alanine': ('GCU', 'GCC', 'GCA', 'GCG'),
+                'Arginine': ('CGU', 'CGC', 'CGA', 'CGG', 'AGA', 'AGG'),
+                'Asparagine': ('AAU', 'AAC'),
+                'Aspartic_Acid': ('GAU', 'GAC'),
+                'Cysteine': ('UGU', 'UGC'),
+                'Glutamic_Acid': ('GAA', 'GAG'),
+                'Glutamine': ('CAA', 'CAG'),
+                'Glycine': ('GGU', 'GGC', 'GGA', 'GGG'),
+                'Histidine': ('CAU', 'CAC'),
+                'Isoleucine': ('AUU', 'AUC', 'AUA'),
+                'Leucine': ('UUA', 'UUG', 'CUU', 'CUC', 'CUA', 'CUG'),
+                'Lysine': ('AAA', 'AAG'),
+                'START': ('AUG',),
+                'Phenylalanine': ('UUU', 'UUC'),
+                'Proline': ('CCU', 'CCC', 'CCA', 'CCG'),
+                'Serine': ('UCU', 'UCC', 'UCA', 'UCG', 'AGU', 'AGC'),
+                'Threonine': ('ACU', 'ACC', 'ACA', 'ACG'),
+                'Tryptophan': ('UGG',),
+                'Tyrosine': ('UAU', 'UAC'),
+                'Valine': ('GUU', 'GUC', 'GUA', 'GUG'),
+                'STOP': ('UAA', 'UAG', 'UGA')
+            }
+            codon_table = {}
+            for amino_acid_name, codons in amino_acid_groups.items():
+                for codon_key in codons:
+                    codon_table[codon_key] = amino_acid_name
+            amino_acid = codon_table.get(codon, 'UNKNOWN')
+            amino_acid_line += '(' + amino_acid + ')' + ' '
+        output_file.write(amino_acid_line + '\n')  
