@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proteins from fasta.txt</title>
+<style>
+:root {
+  color-scheme: light dark;
+  --bg: #fcfcfb; --card: #ffffff; --text: #1f1f1d; --muted: #5f5e5a;
+  --border: #e3e2de; --accent: #1d65c1; --code-bg: #f4f3f0;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg: #1a1a19; --card: #222220; --text: #f0efec; --muted: #b3b2aa;
+    --border: #3a3936; --accent: #62a0ef; --code-bg: #2a2a28;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text);
+       font-family: system-ui, -apple-system, "Segoe UI", sans-serif; line-height: 1.5; }
+main { max-width: 960px; margin: 0 auto; padding: 24px 16px 48px; }
+h1 { margin: 0 0 4px; font-size: 1.6rem; overflow-wrap: anywhere; }
+h2 { margin: 0 0 2px; font-size: 1.2rem; overflow-wrap: anywhere; }
+h3 { margin: 0 0 4px; font-size: 1rem; color: var(--accent); }
+.desc { margin: 0 0 6px; color: var(--muted); overflow: hidden; display: -webkit-box;
+        -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow-wrap: anywhere; }
+.facts { margin: 0 0 12px; color: var(--muted); font-size: 0.92rem; }
+.nowrap { white-space: nowrap; }
+.record { background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+          padding: 16px; margin: 16px 0; }
+.protein { border-left: 3px solid var(--accent); padding-left: 12px; margin: 12px 0; }
+pre { background: var(--code-bg); border-radius: 6px; padding: 12px; margin: 0;
+      overflow-x: auto; font-size: 0.9rem; line-height: 1.6; }
+@media (max-width: 600px) { pre { white-space: pre-wrap; } }
+code, pre, .seq { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+details { margin-top: 12px; }
+summary { cursor: pointer; color: var(--accent); }
+.table-wrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; margin-top: 8px; font-size: 0.88rem; }
+th, td { border-bottom: 1px solid var(--border); padding: 6px 8px; text-align: left; white-space: nowrap; }
+th { color: var(--muted); font-weight: 600; }
+tr.incomplete td { color: var(--muted); }
+.empty { color: var(--muted); }
+.legend { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 2px 16px;
+          margin-top: 8px; font-size: 0.9rem; }
+.legend code { font-weight: 700; color: var(--accent); }
+footer { color: var(--muted); font-size: 0.85rem; margin-top: 24px; }
+</style>
+</head>
+<body>
+<main>
+<h1>Proteins from fasta.txt</h1>
+<p class="facts">1 sequence read · proteins found in 1 of them ·
+searched the forward strand for open reading frames of at least 50 amino acids</p>
+<section class="record">
+<h2>BTBSCRYR</h2>
+<p class="facts">620 bases · GC content 52.6%</p>
+<div class="protein">
+<h3>Main protein</h3>
+<p class="facts">178 amino acids · 20.9 kDa · <span class="nowrap">bases 11–547</span> · forward (+) strand, frame 2 · ends at a stop codon</p>
+<pre>    1  MSKAGTKITF FEDKNFQGRH YDSDCDCADF HMYLSRCNSI RVEGGTWAVY ERPNFAGYMY
+   61  ILPRGEYPEY QHWMGLNDRL SSCRAVHLSS GGQYKLQIFE KGDFNGQMHE TTEDCPSIME
+  121  QFHMREVHSC KVLEGAWIFY ELPNYRGRQY LLDKKEYRKP VDWGAASPAV QSFRRIVE</pre>
+</div>
+<details>
+<summary>All 2 open reading frames of at least 50 amino acids</summary>
+<p class="facts">Longest first. Grey rows have no stop codon before the sequence ends.</p>
+<div class="table-wrap"><table>
+<tr><th>#</th><th>Amino acids</th><th>Strand</th><th>Frame</th><th>Bases</th><th>Stop codon?</th><th>Start of protein</th></tr>
+<tr><td>1</td><td>178</td><td>+</td><td>2</td><td>11–547</td><td>yes</td><td class="seq">MSKAGTKITFFEDKNFQGRHYDSDCDCAD…</td></tr>
+<tr><td>2</td><td>144</td><td>+</td><td>3</td><td>159–593</td><td>yes</td><td class="seq">MKGPILLGTCTSYPGASILSTSTGWASTT…</td></tr>
+</table></div>
+</details>
+</section>
+
+<details>
+<summary>What do the letters mean?</summary>
+<div class="legend">
+<div><code>A</code> Alanine</div>
+<div><code>R</code> Arginine</div>
+<div><code>N</code> Asparagine</div>
+<div><code>D</code> Aspartic acid</div>
+<div><code>C</code> Cysteine</div>
+<div><code>Q</code> Glutamine</div>
+<div><code>E</code> Glutamic acid</div>
+<div><code>G</code> Glycine</div>
+<div><code>H</code> Histidine</div>
+<div><code>I</code> Isoleucine</div>
+<div><code>L</code> Leucine</div>
+<div><code>K</code> Lysine</div>
+<div><code>M</code> Methionine</div>
+<div><code>F</code> Phenylalanine</div>
+<div><code>P</code> Proline</div>
+<div><code>S</code> Serine</div>
+<div><code>T</code> Threonine</div>
+<div><code>W</code> Tryptophan</div>
+<div><code>Y</code> Tyrosine</div>
+<div><code>V</code> Valine</div>
+<div><code>X</code> Unknown (an ambiguous codon)</div>
+
+</div>
+</details>
+<footer>
+<p>An <strong>open reading frame (ORF)</strong> runs from a start codon (AUG) to the next stop
+codon (UAA, UAG or UGA) in the same reading frame. The main protein is the longest ORF that ends at
+a stop codon; if none does, it's the longest ORF found, marked "incomplete". Forward-strand ORFs are
+preferred, because mRNA records are written in the forward direction.</p>
+<p>In genomic DNA, genes are interrupted by introns that this program can't cut out, so a protein
+found there may be only part of the real one. For the real protein, use an mRNA record
+(for example a RefSeq "NM_" sequence).</p>
+<p>Made with reader.py, using the standard genetic code.</p>
+</footer>
+</main>
+</body>
+</html>

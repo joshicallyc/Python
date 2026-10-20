@@ -111,7 +111,7 @@ Rules that make this stick:
 examples and self-checking exercises). Its last part covers `P0-01`.
 
 ### Setup
-- [ ] `P0-01` **Get Python running.** [Google Colab](https://colab.research.google.com) counts: it runs notebooks in the
+- [x] `P0-01` **Get Python running.** [Google Colab](https://colab.research.google.com) counts: it runs notebooks in the
       browser with nothing to install and is enough for Phases 1–4. Install **Miniconda** on your laptop when you first
       need local packages or want to run scripts outside the browser.
 - [ ] `P0-02` Install **VS Code** with the Python and Jupyter extensions.
@@ -136,10 +136,10 @@ examples and self-checking exercises). Its last part covers `P0-01`.
 Right now the script only writes the FASTA header to `codon.txt`; **no amino acids come out.** That makes it a
 good first debugging exercise. Work through these hints in order, and try each one before asking for the answer:
 
-- [ ] `P0-05` **The real bug:** `for codon in output:` loops over the string **one letter at a time**, so a single letter
+- [x] `P0-05` **The real bug:** `for codon in output:` loops over the string **one letter at a time**, so a single letter
       can never equal `'AUG'`. How do you loop over 3-letter chunks? (Hint: you already wrote the
       `range(0, len(output), 3)` loop. It just throws away each codon it makes.)
-- [ ] `P0-06` `elif codon == ('GUU', 'GUC', ...)` compares a string to a tuple, so it's always `False`. What operator did
+- [x] `P0-06` `elif codon == ('GUU', 'GUC', ...)` compares a string to a tuple, so it's always `False`. What operator did
       you use correctly on the lines above it?
 - [ ] `P0-07` **FASTA sequences span several lines.** Translating line by line splits codons across line breaks. Collect all
       sequence lines into one string first, then translate.

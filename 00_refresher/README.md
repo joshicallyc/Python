@@ -15,7 +15,7 @@ the core skills with DNA examples instead of toy problems, then runs the DNA tra
 | 4 | Dictionaries | A mini codon table: translating codons into a protein |
 | 5 | Functions | `transcribe()` and `split_codons()` |
 | 6 | Files | Reading a FASTA file: header vs. sequence lines |
-| 7 | Debugging | Running `reader.py` and explaining why it outputs no amino acids |
+| 7 | Debugging | Running the first version of `reader.py` and explaining why it outputs no amino acids |
 | Bonus | Plotting | A bar chart of base counts with matplotlib |
 
 **How to use it:** open it in Colab with the badge above, and run cells in order with **Shift + Enter**.
