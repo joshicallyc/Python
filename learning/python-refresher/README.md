@@ -1,10 +1,10 @@
 # Python refresher
 
 A one-evening (about 60–75 minutes) Google Colab notebook that brings Python back after a break. It reviews
-the core skills with DNA examples instead of toy problems, then runs the DNA translator in
-[`CLI_project/`](../CLI_project/) to find its bug.
+the core skills with DNA examples instead of toy problems, then runs the first version of the DNA translator in
+[`dna-translator/`](../../dna-translator/) to find its bug.
 
-<a href="https://colab.research.google.com/github/joshicallyc/Python/blob/main/00_refresher/python_refresher.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+<a href="https://colab.research.google.com/github/joshicallyc/Python/blob/main/learning/python-refresher/python_refresher.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
 | Part | Topic | Practice |
 |---|---|---|

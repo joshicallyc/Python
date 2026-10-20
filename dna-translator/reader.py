@@ -10,7 +10,7 @@ For every sequence in the file, this program:
   4. translates them into proteins,
 and saves everything as an HTML page you can open in any web browser.
 
-Examples (run these in a terminal, inside the CLI_project folder):
+Examples (run these in a terminal, inside the dna-translator folder):
     python3 reader.py -f fasta.txt
     python3 reader.py -f fasta.txt -o my_proteins.html
     python3 reader.py -f fasta.txt --fasta proteins.fasta

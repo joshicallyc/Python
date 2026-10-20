@@ -1,13 +1,14 @@
 # Context for Claude
 
 This repo is Josh Li's long-running learning project: building computing and machine-learning skills for
-bioengineering (disease diagnostics and drug development). **ROADMAP.md is the plan and the record of progress.**
+bioengineering (disease diagnostics and drug development). **`learning/ROADMAP.md` is the plan and the record of
+progress.**
 
 ## Background (snapshot as of October 2026; update as things change)
 - UCLA first-year (started Fall 2026), Biophysics major, interested in diagnostics and drug development;
   considering a bioinformatics minor.
-- **Summer 2026:** Python basics (strings, loops, conditionals) and `CLI_project/reader.py`, a DNA → mRNA → protein
-  translator; then basic HTML/CSS (`survey.html`, `cafe_menu.html`).
+- **Summer 2026:** Python basics (strings, loops, conditionals) and `dna-translator/reader.py`, a DNA → mRNA →
+  protein translator; then basic HTML/CSS (`survey-form/`, `cafe-menu/`).
 - **Still learning:** functions, dictionaries in practice, NumPy/pandas, plotting, command-line git.
 - Learns best with **short, visual tasks on real biological data**. Time is limited during the quarter.
 - **Goal:** join a UCLA lab during 2026–27; take linear algebra, statistics, and programming courses in year 2.
@@ -23,8 +24,10 @@ at most. Those plans change often, so don't track them.
   explicitly asks for the full code, give it and explain it line by line.
 - Pitch explanations at a beginner level and connect concepts to biology whenever possible.
 - Prefer tasks that end in something visible: a plot, a table, a model score.
-- Each project gets its own folder with a README (what it does, how to run it, a result figure). This GitHub
-  doubles as a portfolio for lab applications.
+- **Repo layout:** this GitHub doubles as a portfolio for lab applications, so the top level shows only finished
+  projects. Each one gets a folder named for what it does (e.g. `dna-translator/`) with a README (what it does, how
+  to run it, a result figure). The roadmap, practice notebooks and work in progress live in `learning/`; a project
+  moves to the top level once it's finished.
 - Use Python 3. Use Jupyter/Colab notebooks for data exploration and `.py` scripts for reusable tools.
 - **Workflow (Josh's choice):** Josh writes and runs his project code in VS Code on his laptop. That copy is the
   main one. Claude explains, hints and reviews; read the latest version from GitHub, and ask Josh to upload first
@@ -35,8 +38,8 @@ Each kind of information has exactly **one** home. Don't create other trackers o
 
 | What | Home |
 |---|---|
-| The plan, and which items are done (IDs like `P0-05`) | `ROADMAP.md` |
-| Weekly history of coding and learning | Progress log at the bottom of `ROADMAP.md` |
+| The plan, and which items are done (IDs like `P0-05`) | `learning/ROADMAP.md` |
+| Weekly history of coding and learning | Progress log at the bottom of `learning/ROADMAP.md` |
 | This week's tasks, week mode, Sunday check-in, questions for Claude | Josh's private Notion page **"Coding Now"** |
 | Saved explanations ("save this") | Notion subpages under Josh's **Coding** page |
 | Daily habits, classes, assignments, reflections | Josh's existing Notion pages (**read-only** for Claude) |
@@ -44,8 +47,8 @@ Each kind of information has exactly **one** home. Don't create other trackers o
 | Hard deadlines | Josh's Google Calendar. **Never in this repo.** |
 
 ### Commands Josh may use
-- **"start"**: pull the latest `main`. Read ROADMAP.md (the current phase is the first one with unchecked items
-  that aren't marked *(optional)*; Phase 2 needs only two of its three projects) and, if the Notion connector is
+- **"start"**: pull the latest `main`. Read `learning/ROADMAP.md` (the current phase is the first one with unchecked
+  items that aren't marked *(optional)*; Phase 2 needs only two of its three projects) and, if the Notion connector is
   available, "Coding Now", including Josh's "Questions & notes for Claude". Reply in 5 lines or fewer: phase
   progress, tonight's goal, what "done" looks like. Skip this for quick standalone questions.
 - **"wrap up"**: propose which ROADMAP items to check off (by ID) and an update to this week's progress-log row
@@ -81,3 +84,5 @@ Each kind of information has exactly **one** home. Don't create other trackers o
   specific personal deadlines, and anything that ties a named professor to outreach status, notes, or emails. The
   progress log covers coding and learning only.
 - Professor emails go out from Josh's UCLA account, so give paste-ready text and don't create Gmail drafts.
+- Commits and pull requests that organize the repo or do bookkeeping get plain messages, with no attribution lines
+  (no Co-Authored-By trailers or "Generated with" footers). Josh's preference.

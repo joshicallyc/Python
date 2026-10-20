@@ -65,7 +65,6 @@ python3 reader.py -f humandna.fasta.html --min-length 100 --both-strands
 | `fasta.txt` | Example input: one mRNA record |
 | `humandna.fasta.html` | Example input: a human keratin gene as genomic DNA (a plain-text FASTA file despite its name) |
 | `example_output/` | The page and protein FASTA made from `fasta.txt`, and the screenshot above |
-| `codon.txt`, `mRNA.txt` | Output from the first version (summer 2026), kept for comparison |
 
 ## How it grew
 
