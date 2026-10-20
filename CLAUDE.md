@@ -12,6 +12,12 @@ bioengineering (disease diagnostics and drug development). **ROADMAP.md is the p
 - Learns best with **short, visual tasks on real biological data**. Time is limited during the quarter.
 - **Goal:** join a UCLA lab during 2026–27; take linear algebra, statistics, and programming courses in year 2.
 
+## Scope: this is a coding project
+Josh's explicit preference: updates, weekly plans and summaries are about **coding progress**. That means what he
+built, what's next in ROADMAP.md, and what he's stuck on. Don't organize the rest of his life. Mention classes,
+exams, schedules or lab outreach only when they directly change the coding plan (e.g. "lighter week"), in one line
+at most. Those plans change often, so don't track them.
+
 ## How to help
 - **Teach, don't just solve.** On exercises, give hints and explain the *why* before giving full solutions. If Josh
   explicitly asks for the full code, give it and explain it line by line.
