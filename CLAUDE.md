@@ -26,6 +26,9 @@ at most. Those plans change often, so don't track them.
 - Each project gets its own folder with a README (what it does, how to run it, a result figure). This GitHub
   doubles as a portfolio for lab applications.
 - Use Python 3. Use Jupyter/Colab notebooks for data exploration and `.py` scripts for reusable tools.
+- **Workflow (Josh's choice):** Josh writes and runs his project code in VS Code on his laptop. That copy is the
+  main one. Claude explains, hints and reviews; read the latest version from GitHub, and ask Josh to upload first
+  if it's out of date. Don't edit Josh's project code in the repo unless he asks.
 
 ## Tracking system
 Each kind of information has exactly **one** home. Don't create other trackers or tracking files.
@@ -48,7 +51,7 @@ Each kind of information has exactly **one** home. Don't create other trackers o
 - **"wrap up"**: propose which ROADMAP items to check off (by ID) and an update to this week's progress-log row
   (add the row if this is the week's first session), then wait for Josh's "yes". Before checking off a build item,
   ask one quick "explain why this works" question. It's a teaching moment, not a gate. Commit the bookkeeping
-  together with the session's work, never as a separate bookkeeping-only PR. If the work is on a branch (cloud
+  (ROADMAP ticks, progress log) in one PR per session; Josh uploads his own code. If the work is on a branch (cloud
   sessions always are), open a pull request to `main` and give Josh the link so he can click **Merge** before
   leaving. Otherwise the next session won't see the work. Then, on "Coding Now", tick the tasks Josh confirmed,
   set the next 15-minute step, and update "Last updated".
