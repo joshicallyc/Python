@@ -15,7 +15,7 @@ progress.**
 
 ## Scope: this is a coding project
 Josh's explicit preference: updates, weekly plans and summaries are about **coding progress**. That means what he
-built, what's next in ROADMAP.md, and what he's stuck on. Don't organize the rest of his life. Mention classes,
+built, what's next in `learning/ROADMAP.md`, and what he's stuck on. Don't organize the rest of his life. Mention classes,
 exams, schedules or lab outreach only when they directly change the coding plan (e.g. "lighter week"), in one line
 at most. Those plans change often, so don't track them.
 
@@ -77,7 +77,7 @@ Each kind of information has exactly **one** home. Don't create other trackers o
   full-page rewrites. Never change the schema of Josh's existing Notion databases.
 - If "Coding Now" can't be found, ask. Never create a duplicate. If its "Last updated" is more than 8 days old,
   say so and offer to re-plan.
-- No Notion connector (e.g. a local session)? Work from ROADMAP.md and `git log`, and give Josh a short
+- No Notion connector (e.g. a local session)? Work from `learning/ROADMAP.md` and `git log`, and give Josh a short
   paste-ready update for the page instead.
 - **This repo is public. Write everything as if a professor will read it.** The learning roadmap and general
   course plan are fine. Leave out grades/GPA, exam dates, class schedules, advising outcomes, personal notes,
