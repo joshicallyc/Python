@@ -14,7 +14,8 @@ For each sequence in the file, `reader.py`:
 3. finds every **open reading frame (ORF)**, a stretch from a start codon (AUG) to the next stop codon
    (UAA, UAG or UGA), in all three reading frames (six with `--both-strands`);
 4. translates each ORF with the standard genetic code and picks the **main protein**: the longest ORF that ends at
-   a stop codon.
+   a stop codon, preferring the forward strand (with `--both-strands`, an opposite-strand ORF is picked only if the
+   forward strand has none).
 
 The page shows each record's length and GC content, then its main protein (length, mass in kDa, position) and a
 table of every ORF found. `fasta.txt` (one short mRNA record) gives a 178-amino-acid protein from bases 11–547.
@@ -34,7 +35,7 @@ This writes `fasta_proteins.html` next to the input file. Open it in your browse
 | Option | What it does |
 |---|---|
 | `-f FILE`, `--file FILE` | The FASTA file to read (required) |
-| `-o PAGE`, `--output PAGE` | Where to save the page (default: the input's name + `_proteins.html`) |
+| `-o PAGE`, `--output PAGE` | Where to save the page (default: the input's name without its extension + `_proteins.html`, in the input's folder) |
 | `--min-length N` | The shortest protein to report, in amino acids (default: 50) |
 | `--both-strands` | Also search the opposite strand. Only useful for genomic DNA; ORFs found there may be noise |
 | `--fasta FILE` | Also save each record's main protein as a protein FASTA file |
@@ -65,7 +66,6 @@ python3 reader.py -f humandna.fasta.html --min-length 100 --both-strands
 | `fasta.txt` | Example input: one mRNA record |
 | `humandna.fasta.html` | Example input: a human keratin gene as genomic DNA (a plain-text FASTA file despite its name) |
 | `example_output/` | The page and protein FASTA made from `fasta.txt`, and the screenshot above |
-| `codon.txt`, `mRNA.txt` | Output from the first version (summer 2026), kept for comparison |
 
 ## How it grew
 

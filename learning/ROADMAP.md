@@ -107,7 +107,7 @@ Rules that make this stick:
 
 ## 5. Phase 0: Set up your workbench and fix the translator (fall quarter, now)
 
-**Rusty after a break?** Start with the [Python refresher](00_refresher/) (one evening in Colab, with DNA
+**Rusty after a break?** Start with the [Python refresher](python-refresher/) (one evening in Colab, with DNA
 examples and self-checking exercises). Its last part covers `P0-01`.
 
 ### Setup
@@ -118,21 +118,19 @@ examples and self-checking exercises). Its last part covers `P0-01`.
 - [ ] `P0-03` Learn the **basic git loop** from your own computer: `git add` → `git commit -m "..."` → `git push`, instead of
       uploading files on the GitHub website.
       ([Software Carpentry: Git](https://swcarpentry.github.io/git-novice/), episodes 1–7)
-- [ ] `P0-04` *(optional)* Organize the repo so it reads well to a professor (suggested):
-      ```
-      Python/
-        README.md            ← portfolio front page: link each project + one figure
-        ROADMAP.md           ← this file
-        00_refresher/        ← Python refresher notebook
-        CLI_project/         ← Phase 0
-        web/                 ← move the HTML/CSS projects here
-        01_python_bio/       ← Phase 1
-        02_data_analysis/    ← Phase 2
-        03_ml/               ← Phase 3
-        04_deep_learning/    ← Phase 4
-      ```
+- [ ] `P0-04` *(optional)* Organize the repo so it reads well to a professor. The top level shows only finished
+      projects, each in a folder named for what it does, with a README (what it does, how to run it, a result figure):
+  ```
+  Python/
+    README.md            ← portfolio front page: links each finished project
+    dna-translator/      ← finished projects
+    survey-form/
+    cafe-menu/
+    learning/            ← this roadmap, the Python refresher, and work in progress
+  ```
+  A new project starts in `learning/` and moves to the top level once it's finished.
 
-### Fix the DNA translator (`CLI_project/reader.py`)
+### Fix the DNA translator (`dna-translator/reader.py`)
 Right now the script only writes the FASTA header to `codon.txt`; **no amino acids come out.** That makes it a
 good first debugging exercise. Work through these hints in order, and try each one before asking for the answer:
 
@@ -196,7 +194,7 @@ auto-grading. It feels like puzzles instead of lectures, and each problem is rea
 - [ ] `P1-16` **[Biopython](https://biopython.org)** tutorial: `SeqIO` for reading FASTA/GenBank, `Seq` objects, and
       `Entrez` for downloading a sequence from NCBI by accession number
 
-**Project: sequence toolkit** (`01_python_bio/`)
+**Project: sequence toolkit** (build it in `learning/sequence-toolkit/`; it moves to the top level once it's finished)
 - [ ] `P1-17` Write `seqtools.py` with functions you wrote for Rosalind: `gc_content`, `reverse_complement`, `transcribe`,
       `translate`, `find_orfs`
 - [ ] `P1-18` Write a script that imports it, reads a multi-gene FASTA, and **plots GC content per gene** with
@@ -231,7 +229,7 @@ multiple-testing correction; basic Unix shell.
   [workshop schedule](https://qcb.ucla.edu/collaboratory/schedule-of-workshops/) each quarter; registration means
   committing to every session.
 
-**Projects** (do at least two, in `02_data_analysis/`)
+**Projects** (do at least two, each in its own folder in `learning/` until it's finished)
 - [ ] `P2-01` **A. Diagnostic data exploration:** load scikit-learn's built-in **Breast Cancer Wisconsin (Diagnostic)**
       dataset (`sklearn.datasets.load_breast_cancer`). Its features were measured from microscope images of
       biopsies. Plot how each feature differs between benign and malignant samples, and find which features
@@ -268,7 +266,7 @@ features is a 500×30 matrix, and much of ML is matrix operations.
   Part I. Check UCLA Library for free e-book access.
 - [scikit-learn user guide](https://scikit-learn.org/stable/user_guide.html)
 
-**Projects** (`03_ml/`)
+**Projects** (each in its own folder in `learning/` until it's finished)
 - [ ] `P3-01` **Diagnostic classifier (diagnostics track):** on the Breast Cancer Wisconsin data, train logistic regression and
       a random forest, then report sensitivity, specificity, and ROC-AUC with cross-validation. Then answer: *in
       cancer screening, is a false negative or a false positive worse? How would you move the decision threshold?*
@@ -295,7 +293,7 @@ direction is downhill." That idea, **gradient descent**, is how models learn.
 - Géron, Part II
 - Use **Google Colab's free GPU**; no special hardware needed
 
-**Projects** (`04_deep_learning/`)
+**Projects** (each in its own folder in `learning/` until it's finished)
 - [ ] `P4-01` **Medical image classifier:** use [MedMNIST](https://medmnist.com) (small, standardized medical image datasets
       such as blood cells, pathology, and skin lesions). Train a small CNN, then a pretrained model (transfer
       learning), and compare both against a simple baseline. Report sensitivity and specificity per class.
